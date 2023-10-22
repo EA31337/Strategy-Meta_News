@@ -66,6 +66,11 @@ struct MetaForexNewsRecord {
   string currency;
 };
 
+#ifndef __resource__
+// Defines empty news data in no resource mode.
+string MetaNewsData2022 = "";
+#endif
+
 class Stg_Meta_News : public Strategy {
  protected:
   DictStruct<long, DictStruct<short, MetaForexNewsRecord>> news;
