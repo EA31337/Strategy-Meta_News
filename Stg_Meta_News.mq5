@@ -1,6 +1,6 @@
 /**
  * @file
- * Implements Timezone meta strategy.
+ * Implements News meta strategy.
  */
 
 // Includes conditional compilation directives.
@@ -34,13 +34,13 @@ input ENUM_LOG_LEVEL Log_Level = V_INFO;  // Log level.
 input bool Info_On_Chart = true;          // Display info on chart.
 
 // Includes strategy class.
-#include "Stg_Meta_Timezone.mqh"
+#include "Stg_Meta_News.mqh"
 
 // Defines.
-#define ea_name "Strategy Meta Timezone"
+#define ea_name "Strategy Meta News"
 #define ea_version "2.000"
-#define ea_desc "Meta strategy to run different strategies in the different market time zones."
-#define ea_link "https://github.com/EA31337/Strategy-Meta_Timezone"
+#define ea_desc "Meta News strategy to run different strategies based on the economic news impact."
+#define ea_link "https://github.com/EA31337/Strategy-Meta_News"
 #define ea_author "EA31337 Ltd"
 
 // Properties.
@@ -51,6 +51,13 @@ input bool Info_On_Chart = true;          // Display info on chart.
 #endif
 #property link ea_link
 #property copyright "Copyright 2016-2023, EA31337 Ltd"
+
+// Load external resources.
+#ifdef __resource__
+#resource "\\data\\news2022.csv" as string MetaNewsData2022
+#else
+string MetaNewsData2022 = "";
+#endif
 
 // Class variables.
 EA *ea;
@@ -66,7 +73,7 @@ int OnInit() {
   bool _result = true;
   EAParams ea_params(__FILE__, Log_Level);
   ea = new EA(ea_params);
-  _result &= ea.StrategyAdd<Stg_Meta_Timezone>(Active_Tfs);
+  _result &= ea.StrategyAdd<Stg_Meta_News>(Active_Tfs);
   return (_result ? INIT_SUCCEEDED : INIT_FAILED);
 }
 

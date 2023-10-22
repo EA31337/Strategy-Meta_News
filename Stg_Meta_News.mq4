@@ -6,8 +6,8 @@
 
 /**
  * @file
- * Implements Timezone meta strategy.
+ * Implements News meta strategy.
  */
 
 // Includes the main code.
-#include "Stg_Meta_Timezone.mq5"
+#include "Stg_Meta_News.mq5"
