@@ -10,10 +10,10 @@
 // User input params.
 INPUT2_GROUP("Meta News strategy: main params");
 INPUT2 ENUM_STRATEGY Meta_News_Strategy_Main = STRAT_DEMARKER;           // Main strategy
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_DEMARKER;    // Strategy for high impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_ICHIMOKU;  // Strategy for medium impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_BANDS;        // Strategy for low impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_ENVELOPES;   // Strategy for no impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_CHAIKIN;    // Strategy for high impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_NONE;  // Strategy for medium impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_NONE;        // Strategy for low impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_NONE;   // Strategy for no impact news
 INPUT2_GROUP("Meta News strategy: common params");
 INPUT2 float Meta_News_LotSize = 0;                // Lot size
 INPUT2 int Meta_News_SignalOpenMethod = 0;         // Signal open method
@@ -24,7 +24,7 @@ INPUT2 int Meta_News_SignalOpenBoostMethod = 0;    // Signal open boost method
 INPUT2 int Meta_News_SignalCloseMethod = 0;        // Signal close method
 INPUT2 int Meta_News_SignalCloseFilter = 32;       // Signal close filter (-127-127)
 INPUT2 float Meta_News_SignalCloseLevel = 0;       // Signal close level
-INPUT2 int Meta_News_PriceStopMethod = 0;          // Price limit method
+INPUT2 int Meta_News_PriceStopMethod = 1;          // Price limit method
 INPUT2 float Meta_News_PriceStopLevel = 2;         // Price limit level
 INPUT2 int Meta_News_TickFilterMethod = 32;        // Tick filter method (0-255)
 INPUT2 float Meta_News_MaxSpread = 4.0;            // Max spread to trade (in pips)
@@ -68,7 +68,7 @@ struct MetaForexNewsRecord {
 
 class Stg_Meta_News : public Strategy {
  protected:
-  DictStruct<long, MetaForexNewsRecord> news;
+  DictStruct<long, DictStruct<short, MetaForexNewsRecord>> news;
   DictStruct<long, Ref<Strategy>> strats;
 
  public:
@@ -105,16 +105,25 @@ class Stg_Meta_News : public Strategy {
    */
   void LoadNews() {
     string news_records[];
-    StringSplit(MetaNewsData2023, '\n', news_records);
-    for (int i = 0; i < ArraySize(news_records); i++) {
+    StringSplit(MetaNewsData2022, '\n', news_records);
+    for (int i = 1; i < ArraySize(news_records); i++) {
       string record_fields[];
+      DictStruct<short, MetaForexNewsRecord> record_dict;
       MetaForexNewsRecord record;
       StringSplit(news_records[i], ',', record_fields);
+      if (ArraySize(record_fields) == 0) {
+        // Ignore empty lines;
+        continue;
+      }
       record.start = StrToTime(record_fields[0]);
       record.name = record_fields[1];
       record.impact = (ENUM_META_NEWS_IMPACT_LEVEL)StringToInteger(record_fields[2]);
       record.currency = record_fields[3];
-      news.Set(record.start, record);
+      if (news.KeyExists(record.start)) {
+        record_dict = news.GetByKey(record.start);
+      }
+      record_dict.Push(record);
+      news.Set(record.start, record_dict);
     }
   }
 
@@ -327,18 +336,28 @@ class Stg_Meta_News : public Strategy {
    */
   Ref<Strategy> GetStrategy(ENUM_ORDER_TYPE _cmd, int _method = 0, float _level = 0.0f, int _shift = 0) {
     Ref<Strategy> _strat_ref = strats.GetByKey(0);
-    /*
-    if (!_strat_signal.IsSet()) {
-      // Returns false when indicator data is not valid.
-      return _strat_ref;
+    datetime _current_dt = (datetime)round((double)(TimeCurrent() / 60)) * 60;  // Round timestamp to a minute.
+    if (news.KeyExists(_current_dt)) {
+      DictStruct<short, MetaForexNewsRecord> _news_records = news.GetByKey(_current_dt);
+      for (DictStructIterator<short, MetaForexNewsRecord> iter = _news_records.Begin(); iter.IsValid(); ++iter) {
+        MetaForexNewsRecord _news_item = iter.Value();
+        switch (_news_item.impact) {
+          case HIGH:
+            _strat_ref = strats.GetByKey(1);
+            return _strat_ref;
+            break;
+          case MEDIUM:
+            _strat_ref = strats.GetByKey(2);
+            break;
+          case LOW:
+            _strat_ref = strats.GetByKey(3);
+            break;
+          case NONE:
+            _strat_ref = strats.GetByKey(4);
+            break;
+        }
+      }
     }
-    */
-    /*
-    if (_result_signal) {
-      // On signal, switch the main strategy.
-      _strat_ref = strats.GetByKey(2);
-    }
-    */
     return _strat_ref;
   }
 
@@ -370,17 +389,15 @@ class Stg_Meta_News : public Strategy {
    * Check strategy's opening signal.
    */
   bool SignalOpen(ENUM_ORDER_TYPE _cmd, int _method, float _level = 0.0f, int _shift = 0) {
-    bool _result = false;  // strats.Size() > 0;
+    bool _result = true;
     MarketTimeForex _mtf;
     Ref<Strategy> _strat_ref = GetStrategy(_cmd, _method, _level, _shift);
-    /*
-    if (_strat_ref.IsSet() && _mtf.CheckHours(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_LONDON))) {
+    if (_strat_ref.IsSet()) {
       _level = _level == 0.0f ? _strat_ref.Ptr().Get<float>(STRAT_PARAM_SOL) : _level;
       _method = _method == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SOM) : _method;
       _shift = _shift == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SHIFT) : _shift;
-      _result |= _strat_ref.Ptr().SignalOpen(_cmd, _method, _level, _shift);
+      _result &= _strat_ref.Ptr().SignalOpen(_cmd, _method, _level, _shift);
     }
-    */
     return _result;
   }
 
