@@ -9,10 +9,11 @@
 
 // User input params.
 INPUT2_GROUP("Meta News strategy: main params");
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_London = STRAT_DEMARKER;   // London market hours strategy
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_NewYork = STRAT_ICHIMOKU;  // New York market hours strategy
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Sydney = STRAT_BANDS;      // Sydney market hours strategy
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Tokyo = STRAT_ENVELOPES;   // Tokyo market hours strategy
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Main = STRAT_DEMARKER;           // Main strategy
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_DEMARKER;    // Strategy for high impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_ICHIMOKU;  // Strategy for medium impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_BANDS;        // Strategy for low impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_ENVELOPES;   // Strategy for no impact news
 INPUT2_GROUP("Meta News strategy: common params");
 INPUT2 float Meta_News_LotSize = 0;                // Lot size
 INPUT2 int Meta_News_SignalOpenMethod = 0;         // Signal open method
@@ -49,8 +50,25 @@ struct Stg_Meta_News_Params_Defaults : StgParams {
   }
 };
 
+// Define the enumeration to store news impact level.
+enum ENUM_META_NEWS_IMPACT_LEVEL {
+  HIGH,
+  MEDIUM,
+  LOW,
+  NONE,
+};
+
+// Define the structure to store news records.
+struct MetaForexNewsRecord {
+  datetime start;
+  string name;
+  ENUM_META_NEWS_IMPACT_LEVEL impact;
+  string currency;
+};
+
 class Stg_Meta_News : public Strategy {
  protected:
+  DictStruct<long, MetaForexNewsRecord> news;
   DictStruct<long, Ref<Strategy>> strats;
 
  public:
@@ -72,10 +90,32 @@ class Stg_Meta_News : public Strategy {
    * Event on strategy's init.
    */
   void OnInit() {
-    StrategyAdd(Meta_News_Strategy_London, STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_LONDON));
-    StrategyAdd(Meta_News_Strategy_NewYork, STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_NEWYORK));
-    StrategyAdd(Meta_News_Strategy_Sydney, STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_SYDNEY));
-    StrategyAdd(Meta_News_Strategy_Tokyo, STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_TOKYO));
+    // Initialize strategies.
+    StrategyAdd(Meta_News_Strategy_Main, 0);
+    StrategyAdd(Meta_News_Strategy_Impact_High, 1);
+    StrategyAdd(Meta_News_Strategy_Impact_Medium, 2);
+    StrategyAdd(Meta_News_Strategy_Impact_Low, 3);
+    StrategyAdd(Meta_News_Strategy_Impact_None, 4);
+    // Initialize news.
+    LoadNews();
+  }
+
+  /**
+   * Load news records.
+   */
+  void LoadNews() {
+    string news_records[];
+    StringSplit(MetaNewsData2023, '\n', news_records);
+    for (int i = 0; i < ArraySize(news_records); i++) {
+      string record_fields[];
+      MetaForexNewsRecord record;
+      StringSplit(news_records[i], ',', record_fields);
+      record.start = StrToTime(record_fields[0]);
+      record.name = record_fields[1];
+      record.impact = (ENUM_META_NEWS_IMPACT_LEVEL)StringToInteger(record_fields[2]);
+      record.currency = record_fields[3];
+      news.Set(record.start, record);
+    }
   }
 
   /**
@@ -283,40 +323,64 @@ class Stg_Meta_News : public Strategy {
   }
 
   /**
+   * Gets strategy.
+   */
+  Ref<Strategy> GetStrategy(ENUM_ORDER_TYPE _cmd, int _method = 0, float _level = 0.0f, int _shift = 0) {
+    Ref<Strategy> _strat_ref = strats.GetByKey(0);
+    /*
+    if (!_strat_signal.IsSet()) {
+      // Returns false when indicator data is not valid.
+      return _strat_ref;
+    }
+    */
+    /*
+    if (_result_signal) {
+      // On signal, switch the main strategy.
+      _strat_ref = strats.GetByKey(2);
+    }
+    */
+    return _strat_ref;
+  }
+
+  /**
+   * Gets price stop value.
+   */
+  float PriceStop(ENUM_ORDER_TYPE _cmd, ENUM_ORDER_TYPE_VALUE _mode, int _method = 0, float _level = 0.0f,
+                  short _bars = 4) {
+    float _result = 0;
+    uint _ishift = 0;  // @fixme
+    if (_method == 0) {
+      // Ignores calculation when method is 0.
+      return (float)_result;
+    }
+    Ref<Strategy> _strat_ref = GetStrategy(_cmd, _method, _level, _ishift);  // @todo: Add shift.
+    if (!_strat_ref.IsSet()) {
+      // Returns false when strategy is not set.
+      return false;
+    }
+
+    _level = _level == 0.0f ? _strat_ref.Ptr().Get<float>(STRAT_PARAM_SOL) : _level;
+    _method = _strat_ref.Ptr().Get<int>(STRAT_PARAM_SOM);
+    //_shift = _shift == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SHIFT) : _shift;
+    _result = _strat_ref.Ptr().PriceStop(_cmd, _mode, _method, _level /*, _shift*/);
+    return (float)_result;
+  }
+
+  /**
    * Check strategy's opening signal.
    */
   bool SignalOpen(ENUM_ORDER_TYPE _cmd, int _method, float _level = 0.0f, int _shift = 0) {
     bool _result = false;  // strats.Size() > 0;
     MarketTimeForex _mtf;
-    Ref<Strategy> _strat_ref;
-    _strat_ref = strats.GetByKey(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_LONDON));
+    Ref<Strategy> _strat_ref = GetStrategy(_cmd, _method, _level, _shift);
+    /*
     if (_strat_ref.IsSet() && _mtf.CheckHours(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_LONDON))) {
       _level = _level == 0.0f ? _strat_ref.Ptr().Get<float>(STRAT_PARAM_SOL) : _level;
       _method = _method == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SOM) : _method;
       _shift = _shift == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SHIFT) : _shift;
       _result |= _strat_ref.Ptr().SignalOpen(_cmd, _method, _level, _shift);
     }
-    _strat_ref = strats.GetByKey(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_NEWYORK));
-    if (_strat_ref.IsSet() && _mtf.CheckHours(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_NEWYORK))) {
-      _level = _level == 0.0f ? _strat_ref.Ptr().Get<float>(STRAT_PARAM_SOL) : _level;
-      _method = _method == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SOM) : _method;
-      _shift = _shift == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SHIFT) : _shift;
-      _result |= _strat_ref.Ptr().SignalOpen(_cmd, _method, _level, _shift);
-    }
-    _strat_ref = strats.GetByKey(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_SYDNEY));
-    if (_strat_ref.IsSet() && _mtf.CheckHours(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_SYDNEY))) {
-      _level = _level == 0.0f ? _strat_ref.Ptr().Get<float>(STRAT_PARAM_SOL) : _level;
-      _method = _method == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SOM) : _method;
-      _shift = _shift == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SHIFT) : _shift;
-      _result |= _strat_ref.Ptr().SignalOpen(_cmd, _method, _level, _shift);
-    }
-    _strat_ref = strats.GetByKey(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_TOKYO));
-    if (_strat_ref.IsSet() && _mtf.CheckHours(STRUCT_ENUM(MarketTimeForex, MARKET_TIME_FOREX_HOURS_TOKYO))) {
-      _level = _level == 0.0f ? _strat_ref.Ptr().Get<float>(STRAT_PARAM_SOL) : _level;
-      _method = _method == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SOM) : _method;
-      _shift = _shift == 0 ? _strat_ref.Ptr().Get<int>(STRAT_PARAM_SHIFT) : _shift;
-      _result |= _strat_ref.Ptr().SignalOpen(_cmd, _method, _level, _shift);
-    }
+    */
     return _result;
   }
 

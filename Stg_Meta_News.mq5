@@ -52,6 +52,13 @@ input bool Info_On_Chart = true;          // Display info on chart.
 #property link ea_link
 #property copyright "Copyright 2016-2023, EA31337 Ltd"
 
+// Load external resources.
+#ifdef __resource__
+#resource "\\data\\news2023.csv" as string MetaNewsData2023
+#else
+string MetaNewsData2023 = "";
+#endif
+
 // Class variables.
 EA *ea;
 
