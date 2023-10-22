@@ -6357,7 +6357,7 @@ Start,Name,Impact,Currency
 06/23/2022 18:00:00,Central Bank Interest Rate,LOW,MXN
 06/23/2022 19:00:00,Gross Domestic Product (YoY)	,LOW,ARS
 06/23/2022 20:30:00,Bank Stress Test Info,HIGH,USD
-06/23/2022 21:00:00,Midsummer’s Eve,NONE,EUR
+06/23/2022 21:00:00,Midsummer's Eve,NONE,EUR
 06/23/2022 23:01:00,GfK Consumer Confidence,MEDIUM,GBP
 06/23/2022 23:01:04,Consumer Confidence,LOW,EUR
 06/23/2022 23:30:00,"National CPI ex Food, Energy (YoY)",MEDIUM,JPY
@@ -7947,7 +7947,7 @@ Start,Name,Impact,Currency
 08/08/2022 15:30:00,3-Month Bill Auction,LOW,USD
 08/08/2022 15:30:00,6-Month Bill Auction,LOW,USD
 08/08/2022 16:00:00,National Day,NONE,SGD
-08/08/2022 22:00:00,National Women’s Day,NONE,ZAR
+08/08/2022 22:00:00,National Women's Day,NONE,ZAR
 08/08/2022 22:45:00,Electronic Card Retail Sales  (MoM),LOW,NZD
 08/08/2022 22:45:00,Electronic Card Retail Sales (YoY),LOW,NZD
 08/08/2022 23:01:00,BRC Like-For-Like Retail Sales (YoY),MEDIUM,GBP
@@ -13158,7 +13158,7 @@ Start,Name,Impact,Currency
 12/31/2022 22:00:00,New Year's Day,NONE,EUR
 12/31/2022 22:00:00,New Year's Day,NONE,SEK
 12/31/2022 22:00:00,New Years Day,NONE,ZAR
-12/31/2022 22:00:00,New Year’s Day,NONE,RON
+12/31/2022 22:00:00,New Year's Day,NONE,RON
 12/31/2022 22:00:00,Restoration Day of the Independent Czech State,NONE,CZK
 12/31/2022 23:00:00,"Day of the Establishment of the Slovak Republic ",NONE,EUR
 12/31/2022 23:00:00,New Year's Day,NONE,EUR
