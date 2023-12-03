@@ -9,11 +9,11 @@
 
 // User input params.
 INPUT2_GROUP("Meta News strategy: main params");
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Main = STRAT_DEMARKER;        // Main strategy
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_CHAIKIN;  // Strategy for high impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_NONE;   // Strategy for medium impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_NONE;      // Strategy for low impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_NONE;     // Strategy for no impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Main = STRAT_RSI;                   // Main strategy
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_MA_BREAKOUT;    // Strategy for high impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_MA_BREAKOUT;  // Strategy for medium impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_MA_BREAKOUT;     // Strategy for low impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_NONE;           // Strategy for no impact news
 INPUT3_GROUP("Meta News strategy: common params");
 INPUT3 float Meta_News_LotSize = 0;                // Lot size
 INPUT3 int Meta_News_SignalOpenMethod = 0;         // Signal open method
