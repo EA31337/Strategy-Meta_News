@@ -100,6 +100,19 @@ class Stg_Meta_News : public Strategy {
     LoadNews();
   }
 
+  datetime StrToTimeEx(string _value) {
+    if (StringSubstr(_value, 2, 1) == "/") {
+      // American date/time format.
+      string _month = StringSubstr(_value, 0, 2);
+      string _day = StringSubstr(_value, 3, 2);
+      string _year = StringSubstr(_value, 6, 4);
+      string _rest = StringSubstr(_value, 11);
+      return StrToTime(_year + "-" + _month + "-" + _day + " " + _rest);
+    }
+
+    return StrToTime(_value);
+  }
+
   /**
    * Load news records.
    */
@@ -115,7 +128,7 @@ class Stg_Meta_News : public Strategy {
         // Ignore empty lines;
         continue;
       }
-      record.start = StrToTime(record_fields[0]);
+      record.start = StrToTimeEx(record_fields[0]);
       record.name = record_fields[1];
       record.impact = (ENUM_META_NEWS_IMPACT_LEVEL)StringToInteger(record_fields[2]);
       record.currency = record_fields[3];
