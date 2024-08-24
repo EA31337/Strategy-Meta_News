@@ -13,7 +13,7 @@ Meta News strategy to run different strategies based on the economic news impact
 
 | Tag      | Framework | Strategies |
 |:--------:|:---------:|:----------:|
-| v2.000   | v3.000.1  | v2.000     |
+| v2.000   | v3.000.2  | v2.000     |
 
 <!-- Named links -->
 
