@@ -53,7 +53,7 @@ input bool Info_On_Chart = true;          // Display info on chart.
 #property description ea_desc
 #endif
 #property link ea_link
-#property copyright "Copyright 2016-2023, EA31337 Ltd"
+#property copyright "Copyright 2016-2024, EA31337 Ltd"
 
 // Load external resources.
 #ifdef __resource__
