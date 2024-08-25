@@ -57,6 +57,7 @@ input bool Info_On_Chart = true;          // Display info on chart.
 
 // Load external resources.
 #ifdef __resource__
+#resource "\\data\\news2018.csv" as string MetaNewsData2018
 #resource "\\data\\news2022.csv" as string MetaNewsData2022
 #endif
 
