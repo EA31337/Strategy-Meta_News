@@ -333,9 +333,9 @@ Start,Name,Impact,Currency
 01/17/2023 09:00:00,Consumer Price Index (YoY),LOW,EUR
 01/17/2023 09:40:00,3-Month Letras Auction,LOW,EUR
 01/17/2023 09:40:00,9-Month Letras Auction,LOW,EUR
-01/17/2023 10:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-01/17/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-01/17/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+01/17/2023 10:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+01/17/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+01/17/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 01/17/2023 10:40:00,5-y Note Auction,LOW,EUR
 01/17/2023 13:15:00,Housing Starts s.a (YoY),LOW,CAD
 01/17/2023 13:30:00,BoC Consumer Price Index Core (MoM),MEDIUM,CAD
@@ -535,10 +535,10 @@ Start,Name,Impact,Currency
 01/25/2023 07:00:00,Producer Price Index - Output (MoM) n.s.a,LOW,GBP
 01/25/2023 07:00:00,Producer Price Index - Output (YoY) n.s.a,LOW,GBP
 01/25/2023 08:00:00,Non-Monetary Policy ECB Meeting,LOW,EUR
-01/25/2023 09:00:00,ZEW Survey – Expectations,MEDIUM,CHF
-01/25/2023 09:00:00,IFO – Business Climate,MEDIUM,EUR
-01/25/2023 09:00:00,IFO – Current Assessment,MEDIUM,EUR
-01/25/2023 09:00:00,IFO – Expectations,MEDIUM,EUR
+01/25/2023 09:00:00,ZEW Survey - Expectations,MEDIUM,CHF
+01/25/2023 09:00:00,IFO - Business Climate,MEDIUM,EUR
+01/25/2023 09:00:00,IFO - Current Assessment,MEDIUM,EUR
+01/25/2023 09:00:00,IFO - Expectations,MEDIUM,EUR
 01/25/2023 10:30:00,30-y Bond Auction,LOW,EUR
 01/25/2023 12:00:00,MBA Mortgage Applications,LOW,USD
 01/25/2023 14:00:00,Australia Day,NONE,AUD
@@ -769,7 +769,7 @@ Start,Name,Impact,Currency
 02/02/2023 15:30:00,EIA Natural Gas Storage Change,LOW,USD
 02/02/2023 16:30:00,4-Week Bill Auction,LOW,USD
 02/02/2023 18:30:00,ECB's President Lagarde speech,HIGH,EUR
-02/02/2023 21:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+02/02/2023 21:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 02/02/2023 22:00:00,Judo Bank Composite PMI,LOW,AUD
 02/02/2023 22:00:00,Judo Bank Services PMI,MEDIUM,AUD
 02/03/2023 00:30:00,Home Loans,LOW,AUD
@@ -1140,9 +1140,9 @@ Start,Name,Impact,Currency
 02/21/2023 09:30:00,S&P Global/CIPS Composite PMI,MEDIUM,GBP
 02/21/2023 09:30:00,S&P Global/CIPS Manufacturing PMI,MEDIUM,GBP
 02/21/2023 09:30:00,S&P Global/CIPS Services PMI,HIGH,GBP
-02/21/2023 10:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-02/21/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-02/21/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+02/21/2023 10:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+02/21/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+02/21/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 02/21/2023 10:40:00,5-y Note Auction,LOW,EUR
 02/21/2023 13:30:00,BoC Consumer Price Index Core (MoM),MEDIUM,CAD
 02/21/2023 13:30:00,BoC Consumer Price Index Core (YoY),HIGH,CAD
@@ -1182,10 +1182,10 @@ Start,Name,Impact,Currency
 02/22/2023 07:00:00,Harmonized Index of Consumer Prices (YoY),HIGH,EUR
 02/22/2023 07:45:00,Business Climate in Manufacturing,LOW,EUR
 02/22/2023 08:00:00,Non-Monetary Policy ECB Meeting,LOW,EUR
-02/22/2023 09:00:00,ZEW Survey – Expectations,MEDIUM,CHF
-02/22/2023 09:00:00,IFO – Business Climate,MEDIUM,EUR
-02/22/2023 09:00:00,IFO – Current Assessment,MEDIUM,EUR
-02/22/2023 09:00:00,IFO – Expectations,MEDIUM,EUR
+02/22/2023 09:00:00,ZEW Survey - Expectations,MEDIUM,CHF
+02/22/2023 09:00:00,IFO - Business Climate,MEDIUM,EUR
+02/22/2023 09:00:00,IFO - Current Assessment,MEDIUM,EUR
+02/22/2023 09:00:00,IFO - Expectations,MEDIUM,EUR
 02/22/2023 09:00:00,Consumer Price Index (EU Norm) (MoM),LOW,EUR
 02/22/2023 09:00:00,Consumer Price Index (EU Norm) (YoY),LOW,EUR
 02/22/2023 09:00:00,Consumer Price Index (MoM),LOW,EUR
@@ -1422,7 +1422,7 @@ Start,Name,Impact,Currency
 03/02/2023 15:30:00,EIA Natural Gas Storage Change,LOW,USD
 03/02/2023 16:30:00,4-Week Bill Auction,LOW,USD
 03/02/2023 18:30:00,RBNZ's Governor Orr speech,MEDIUM,NZD
-03/02/2023 21:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+03/02/2023 21:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 03/02/2023 21:00:00,Fed's Waller speech,MEDIUM,USD
 03/02/2023 22:00:00,Judo Bank Composite PMI,LOW,AUD
 03/02/2023 22:00:00,Judo Bank Services PMI,MEDIUM,AUD
@@ -1809,11 +1809,11 @@ Start,Name,Impact,Currency
 03/21/2023 07:00:00,Trade Balance,LOW,CHF
 03/21/2023 07:00:00,Public Sector Net Borrowing,LOW,GBP
 03/21/2023 09:40:00,5-y Note Auction,LOW,EUR
-03/21/2023 10:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-03/21/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+03/21/2023 10:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+03/21/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 03/21/2023 10:00:00,Construction Output  s.a (MoM),LOW,EUR
 03/21/2023 10:00:00,Construction Output w.d.a (YoY),LOW,EUR
-03/21/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+03/21/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 03/21/2023 10:00:00,30-y Bond Auction,LOW,GBP
 03/21/2023 12:30:00,BoC Consumer Price Index Core (MoM),MEDIUM,CAD
 03/21/2023 12:30:00,BoC Consumer Price Index Core (YoY),HIGH,CAD
@@ -1941,9 +1941,9 @@ Start,Name,Impact,Currency
 03/26/2023 23:50:00,Corporate Service Price Index (YoY),LOW,JPY
 03/27/2023 05:00:00,Coincident Index,LOW,JPY
 03/27/2023 05:00:00,Leading Economic Index,LOW,JPY
-03/27/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-03/27/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-03/27/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+03/27/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+03/27/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+03/27/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 03/27/2023 08:00:00,M3 Money Supply (3m),LOW,EUR
 03/27/2023 08:00:00,M3 Money Supply (YoY),LOW,EUR
 03/27/2023 08:00:00,Private Loans (YoY),LOW,EUR
@@ -1980,7 +1980,7 @@ Start,Name,Impact,Currency
 03/29/2023 06:00:00,GfK Consumer Confidence Survey,MEDIUM,EUR
 03/29/2023 06:45:00,Consumer Confidence,LOW,EUR
 03/29/2023 07:00:00,Non-Monetary Policy ECB Meeting,LOW,EUR
-03/29/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+03/29/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 03/29/2023 08:00:00,Trade Balance non-EU,LOW,EUR
 03/29/2023 08:30:00,Consumer Credit,LOW,GBP
 03/29/2023 08:30:00,M4 Money Supply (MoM),LOW,GBP
@@ -2036,7 +2036,7 @@ Start,Name,Impact,Currency
 03/30/2023 16:45:00,Fed's Barkin speech,MEDIUM,USD
 03/30/2023 17:00:00,Fed's Kashkari speech,MEDIUM,USD
 03/30/2023 19:45:00,Treasury Sec Yellen speech,MEDIUM,USD
-03/30/2023 21:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+03/30/2023 21:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 03/30/2023 23:30:00,Jobs / Applicants Ratio,MEDIUM,JPY
 03/30/2023 23:30:00,Tokyo Consumer Price Index (YoY),MEDIUM,JPY
 03/30/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",MEDIUM,JPY
@@ -2475,9 +2475,9 @@ Start,Name,Impact,Currency
 04/18/2023 08:00:00,Trade Balance EU,LOW,EUR
 04/18/2023 08:40:00,3-Month Letras Auction,LOW,EUR
 04/18/2023 08:40:00,9-Month Letras Auction,LOW,EUR
-04/18/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-04/18/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-04/18/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+04/18/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+04/18/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+04/18/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 04/18/2023 09:30:00,30-y Bond Auction,LOW,GBP
 04/18/2023 12:30:00,BoC Consumer Price Index Core (MoM),MEDIUM,CAD
 04/18/2023 12:30:00,BoC Consumer Price Index Core (YoY),HIGH,CAD
@@ -2615,9 +2615,9 @@ Start,Name,Impact,Currency
 04/21/2023 20:30:00,CFTC S&P 500 NC Net Positions,LOW,USD
 04/23/2023 23:00:00,Rightmove House Price Index (MoM),LOW,GBP
 04/23/2023 23:00:00,Rightmove House Price Index (YoY),LOW,GBP
-04/24/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-04/24/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-04/24/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+04/24/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+04/24/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+04/24/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 04/24/2023 10:00:00,German Buba Monthly Report,LOW,EUR
 04/24/2023 12:00:00,ANZAC Day,NONE,NZD
 04/24/2023 12:30:00,New Housing Price Index (MoM),LOW,CAD
@@ -2655,7 +2655,7 @@ Start,Name,Impact,Currency
 04/26/2023 03:00:00,Credit Card Spending (YoY),LOW,NZD
 04/26/2023 06:00:00,GfK Consumer Confidence Survey,MEDIUM,EUR
 04/26/2023 06:45:00,Consumer Confidence,LOW,EUR
-04/26/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+04/26/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 04/26/2023 11:00:00,MBA Mortgage Applications,LOW,USD
 04/26/2023 12:30:00,Durable Goods Orders,HIGH,USD
 04/26/2023 12:30:00,Durable Goods Orders ex Defense,MEDIUM,USD
@@ -2699,7 +2699,7 @@ Start,Name,Impact,Currency
 04/27/2023 15:30:00,4-Week Bill Auction,LOW,USD
 04/27/2023 16:15:00,ECB's Panetta speech,MEDIUM,EUR
 04/27/2023 17:00:00,7-Year Note Auction,LOW,USD
-04/27/2023 22:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+04/27/2023 22:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 04/27/2023 23:30:00,Jobs / Applicants Ratio,MEDIUM,JPY
 04/27/2023 23:30:00,Tokyo Consumer Price Index (YoY),MEDIUM,JPY
 04/27/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",MEDIUM,JPY
@@ -3157,15 +3157,15 @@ Start,Name,Impact,Currency
 05/16/2023 08:00:00,Consumer Price Index (YoY),LOW,EUR
 05/16/2023 08:40:00,3-Month Letras Auction,LOW,EUR
 05/16/2023 08:40:00,9-Month Letras Auction,LOW,EUR
-05/16/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-05/16/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+05/16/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+05/16/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 05/16/2023 09:00:00,Employment Change (QoQ),LOW,EUR
 05/16/2023 09:00:00,Employment Change (YoY),LOW,EUR
 05/16/2023 09:00:00,Gross Domestic Product s.a. (QoQ),HIGH,EUR
 05/16/2023 09:00:00,Gross Domestic Product s.a. (YoY),HIGH,EUR
 05/16/2023 09:00:00,Trade Balance n.s.a.,LOW,EUR
 05/16/2023 09:00:00,Trade Balance s.a.,LOW,EUR
-05/16/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+05/16/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 05/16/2023 12:15:00,Fed's Mester speech,MEDIUM,USD
 05/16/2023 12:30:00,BoC Consumer Price Index Core (MoM),MEDIUM,CAD
 05/16/2023 12:30:00,BoC Consumer Price Index Core (YoY),HIGH,CAD
@@ -3357,9 +3357,9 @@ Start,Name,Impact,Currency
 05/24/2023 06:00:00,Retail Price Index (MoM),MEDIUM,GBP
 05/24/2023 06:00:00,Retail Price Index (YoY),MEDIUM,GBP
 05/24/2023 07:00:00,Non-Monetary Policy ECB Meeting,LOW,EUR
-05/24/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-05/24/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-05/24/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+05/24/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+05/24/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+05/24/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 05/24/2023 08:30:00,DCLG House Price Index (YoY),LOW,GBP
 05/24/2023 09:30:00,BoE's Governor Bailey speech,HIGH,GBP
 05/24/2023 10:00:00,German Buba Monthly Report,LOW,EUR
@@ -3397,7 +3397,7 @@ Start,Name,Impact,Currency
 05/25/2023 15:30:00,4-Week Bill Auction,LOW,USD
 05/25/2023 16:30:00,BoE's Haskel speech,MEDIUM,GBP
 05/25/2023 17:00:00,7-Year Note Auction,LOW,USD
-05/25/2023 22:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+05/25/2023 22:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 05/25/2023 23:30:00,Tokyo Consumer Price Index (YoY),MEDIUM,JPY
 05/25/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",MEDIUM,JPY
 05/25/2023 23:30:00,Tokyo CPI ex Fresh Food (YoY),MEDIUM,JPY
@@ -3506,7 +3506,7 @@ Start,Name,Impact,Currency
 05/31/2023 06:45:00,Producer Prices (MoM),LOW,EUR
 05/31/2023 07:55:00,Unemployment Change,MEDIUM,EUR
 05/31/2023 07:55:00,Unemployment Rate s.a.,MEDIUM,EUR
-05/31/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+05/31/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 05/31/2023 08:00:00,EU Financial Stability Review,MEDIUM,EUR
 05/31/2023 08:00:00,Current Account Balance,LOW,EUR
 05/31/2023 08:00:00,Gross Domestic Product (QoQ),MEDIUM,EUR
@@ -3802,9 +3802,9 @@ Start,Name,Impact,Currency
 06/13/2023 08:00:00,New Loans,LOW,CNY
 06/13/2023 08:40:00,3-Month Letras Auction,LOW,EUR
 06/13/2023 08:40:00,9-Month Letras Auction,LOW,EUR
-06/13/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-06/13/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-06/13/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+06/13/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+06/13/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+06/13/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 06/13/2023 09:30:00,10-y Bond Auction,LOW,GBP
 06/13/2023 09:40:00,5-y Note Auction,LOW,EUR
 06/13/2023 10:00:00,NFIB Business Optimism Index,LOW,USD
@@ -4105,9 +4105,9 @@ Start,Name,Impact,Currency
 06/25/2023 23:50:00,Corporate Service Price Index (YoY),LOW,JPY
 06/26/2023 05:00:00,Coincident Index,LOW,JPY
 06/26/2023 05:00:00,Leading Economic Index,LOW,JPY
-06/26/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-06/26/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-06/26/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+06/26/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+06/26/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+06/26/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 06/26/2023 10:00:00,German Buba Monthly Report,MEDIUM,EUR
 06/26/2023 14:30:00,Dallas Fed Manufacturing Business Index,LOW,USD
 06/26/2023 15:30:00,3-Month Bill Auction,LOW,USD
@@ -4145,7 +4145,7 @@ Start,Name,Impact,Currency
 06/28/2023 06:00:00,GfK Consumer Confidence Survey,MEDIUM,EUR
 06/28/2023 06:45:00,Consumer Confidence,LOW,EUR
 06/28/2023 07:00:00,Retail Sales (YoY),LOW,EUR
-06/28/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+06/28/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 06/28/2023 08:00:00,ECB's De Guindos speech,MEDIUM,EUR
 06/28/2023 08:00:00,M3 Money Supply (3m),LOW,EUR
 06/28/2023 08:00:00,M3 Money Supply (YoY),LOW,EUR
@@ -4214,7 +4214,7 @@ Start,Name,Impact,Currency
 06/29/2023 15:30:00,4-Week Bill Auction,LOW,USD
 06/29/2023 16:30:00,BoE's Tenreyro speech,MEDIUM,GBP
 06/29/2023 19:00:00,Fed's Bostic speech,MEDIUM,USD
-06/29/2023 22:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+06/29/2023 22:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 06/29/2023 23:30:00,Jobs / Applicants Ratio,LOW,JPY
 06/29/2023 23:30:00,Tokyo Consumer Price Index (YoY),HIGH,JPY
 06/29/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",HIGH,JPY
@@ -4477,9 +4477,9 @@ Start,Name,Impact,Currency
 07/11/2023 08:00:00,Industrial Output w.d.a (YoY),LOW,EUR
 07/11/2023 08:40:00,3-Month Letras Auction,LOW,EUR
 07/11/2023 08:40:00,9-Month Letras Auction,LOW,EUR
-07/11/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-07/11/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-07/11/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+07/11/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+07/11/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+07/11/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 07/11/2023 09:40:00,M2 Money Supply (YoY),LOW,CNY
 07/11/2023 09:40:00,New Loans,LOW,CNY
 07/11/2023 09:40:00,5-y Note Auction,LOW,EUR
@@ -4766,9 +4766,9 @@ Start,Name,Impact,Currency
 07/24/2023 15:30:00,3-Month Bill Auction,LOW,USD
 07/24/2023 15:30:00,6-Month Bill Auction,LOW,USD
 07/24/2023 17:00:00,2-Year Note Auction,LOW,USD
-07/25/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-07/25/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-07/25/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+07/25/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+07/25/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+07/25/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 07/25/2023 08:00:00,ECB Bank Lending Survey,HIGH,EUR
 07/25/2023 12:55:00,Redbook Index (YoY),LOW,USD
 07/25/2023 13:00:00,Housing Price Index (MoM),MEDIUM,USD
@@ -4786,7 +4786,7 @@ Start,Name,Impact,Currency
 07/26/2023 05:00:00,Coincident Index,LOW,JPY
 07/26/2023 05:00:00,Leading Economic Index,LOW,JPY
 07/26/2023 06:45:00,Consumer Confidence,LOW,EUR
-07/26/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+07/26/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 07/26/2023 08:00:00,M3 Money Supply (3m),LOW,EUR
 07/26/2023 08:00:00,M3 Money Supply (YoY),LOW,EUR
 07/26/2023 08:00:00,Private Loans (YoY),LOW,EUR
@@ -4832,7 +4832,7 @@ Start,Name,Impact,Currency
 07/27/2023 15:00:00,Kansas Fed Manufacturing Activity,LOW,USD
 07/27/2023 15:30:00,4-Week Bill Auction,LOW,USD
 07/27/2023 17:00:00,7-Year Note Auction,LOW,USD
-07/27/2023 22:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+07/27/2023 22:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 07/27/2023 23:30:00,Tokyo Consumer Price Index (YoY),HIGH,JPY
 07/27/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",HIGH,JPY
 07/27/2023 23:30:00,Tokyo CPI ex Fresh Food (YoY),MEDIUM,JPY
@@ -5262,9 +5262,9 @@ Start,Name,Impact,Currency
 08/15/2023 06:00:00,ILO Unemployment Rate (3M),HIGH,GBP
 08/15/2023 06:30:00,Producer and Import Prices (MoM),LOW,CHF
 08/15/2023 06:30:00,Producer and Import Prices (YoY),LOW,CHF
-08/15/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-08/15/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-08/15/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+08/15/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+08/15/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+08/15/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 08/15/2023 12:30:00,BoC Consumer Price Index Core (MoM),MEDIUM,CAD
 08/15/2023 12:30:00,BoC Consumer Price Index Core (YoY),HIGH,CAD
 08/15/2023 12:30:00,Consumer Price Index - Core (MoM),LOW,CAD
@@ -5463,9 +5463,9 @@ Start,Name,Impact,Currency
 08/25/2023 06:00:00,Gross Domestic Product (YoY),MEDIUM,EUR
 08/25/2023 06:00:00,Gross Domestic Product w.d.a (YoY),MEDIUM,EUR
 08/25/2023 06:30:00,Employment Level (QoQ),LOW,CHF
-08/25/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-08/25/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-08/25/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+08/25/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+08/25/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+08/25/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 08/25/2023 14:00:00,Jackson Hole Symposium,HIGH,USD
 08/25/2023 14:00:00,Michigan Consumer Sentiment Index,MEDIUM,USD
 08/25/2023 14:00:00,UoM 5-year Consumer Inflation Expectation,MEDIUM,USD
@@ -5523,7 +5523,7 @@ Start,Name,Impact,Currency
 08/30/2023 07:00:00,Consumer Price Index (YoY),LOW,EUR
 08/30/2023 07:00:00,Harmonized Index of Consumer Prices (MoM),LOW,EUR
 08/30/2023 07:00:00,Harmonized Index of Consumer Prices (YoY),MEDIUM,EUR
-08/30/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+08/30/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 08/30/2023 08:00:00,Consumer Confidence,MEDIUM,EUR
 08/30/2023 08:00:00,Economic Sentiment Indicator,MEDIUM,EUR
 08/30/2023 08:00:00,Industrial Confidence,LOW,EUR
@@ -5613,7 +5613,7 @@ Start,Name,Impact,Currency
 08/31/2023 14:30:00,EIA Natural Gas Storage Change,LOW,USD
 08/31/2023 15:30:00,4-Week Bill Auction,LOW,USD
 08/31/2023 16:00:00,ECB's De Guindos speech,MEDIUM,EUR
-08/31/2023 22:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+08/31/2023 22:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 08/31/2023 23:00:00,Judo Bank Manufacturing PMI,LOW,AUD
 08/31/2023 23:50:00,Capital Spending,LOW,JPY
 09/01/2023 00:30:00,Jibun Bank Manufacturing PMI,LOW,JPY
@@ -5867,9 +5867,9 @@ Start,Name,Impact,Currency
 09/12/2023 07:00:00,Harmonized Index of Consumer Prices (YoY),MEDIUM,EUR
 09/12/2023 08:40:00,3-Month Letras Auction,LOW,EUR
 09/12/2023 08:40:00,9-Month Letras Auction,LOW,EUR
-09/12/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-09/12/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-09/12/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+09/12/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+09/12/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+09/12/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 09/12/2023 10:00:00,NFIB Business Optimism Index,LOW,USD
 09/12/2023 12:45:00,Current Account n.s.a.,LOW,EUR
 09/12/2023 12:55:00,Redbook Index (YoY),LOW,USD
@@ -6152,9 +6152,9 @@ Start,Name,Impact,Currency
 09/22/2023 20:30:00,CFTC S&P 500 NC Net Positions,LOW,USD
 09/23/2023 14:00:00,Daylight Saving Time,NONE,NZD
 09/25/2023 05:30:00,BoJ Governor Ueda speech,HIGH,JPY
-09/25/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-09/25/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-09/25/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+09/25/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+09/25/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+09/25/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 09/25/2023 12:30:00,"Chicago Fed National Activity Index ",LOW,USD
 09/25/2023 13:00:00,ECB's President Lagarde speech,HIGH,EUR
 09/25/2023 14:30:00,Dallas Fed Manufacturing Business Index,LOW,USD
@@ -6179,7 +6179,7 @@ Start,Name,Impact,Currency
 09/27/2023 06:00:00,GfK Consumer Confidence Survey,MEDIUM,EUR
 09/27/2023 06:45:00,Consumer Confidence,LOW,EUR
 09/27/2023 07:00:00,Non-Monetary Policy ECB Meeting,LOW,EUR
-09/27/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+09/27/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 09/27/2023 08:00:00,M3 Money Supply (3m),LOW,EUR
 09/27/2023 08:00:00,M3 Money Supply (YoY),LOW,EUR
 09/27/2023 08:00:00,Private Loans (YoY),LOW,EUR
@@ -6236,7 +6236,7 @@ Start,Name,Impact,Currency
 09/28/2023 17:00:00,Fed's Cook speech,MEDIUM,USD
 09/28/2023 19:00:00,Fed's Barkin speech,MEDIUM,USD
 09/28/2023 20:00:00,Fed's Chair Powell speech,HIGH,USD
-09/28/2023 21:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+09/28/2023 21:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 09/28/2023 23:30:00,Jobs / Applicants Ratio,LOW,JPY
 09/28/2023 23:30:00,Tokyo Consumer Price Index (YoY),HIGH,JPY
 09/28/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",HIGH,JPY
@@ -6679,9 +6679,9 @@ Start,Name,Impact,Currency
 10/17/2023 07:00:00,EcoFin Meeting,MEDIUM,EUR
 10/17/2023 08:40:00,3-Month Letras Auction,LOW,EUR
 10/17/2023 08:40:00,9-Month Letras Auction,LOW,EUR
-10/17/2023 09:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-10/17/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-10/17/2023 09:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+10/17/2023 09:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+10/17/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+10/17/2023 09:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 10/17/2023 09:05:00,BoE's Dhingra speech,MEDIUM,GBP
 10/17/2023 09:30:00,30-y Bond Auction,LOW,GBP
 10/17/2023 12:00:00,Fed's Williams speech,MEDIUM,USD
@@ -6871,10 +6871,10 @@ Start,Name,Impact,Currency
 10/25/2023 00:30:00,RBA Trimmed Mean CPI (YoY),HIGH,AUD
 10/25/2023 05:00:00,Coincident Index,LOW,JPY
 10/25/2023 05:00:00,Leading Economic Index,LOW,JPY
-10/25/2023 08:00:00,ZEW Survey – Expectations,MEDIUM,CHF
-10/25/2023 08:00:00,IFO – Business Climate,MEDIUM,EUR
-10/25/2023 08:00:00,IFO – Current Assessment,MEDIUM,EUR
-10/25/2023 08:00:00,IFO – Expectations,MEDIUM,EUR
+10/25/2023 08:00:00,ZEW Survey - Expectations,MEDIUM,CHF
+10/25/2023 08:00:00,IFO - Business Climate,MEDIUM,EUR
+10/25/2023 08:00:00,IFO - Current Assessment,MEDIUM,EUR
+10/25/2023 08:00:00,IFO - Expectations,MEDIUM,EUR
 10/25/2023 08:00:00,M3 Money Supply (3m),LOW,EUR
 10/25/2023 08:00:00,M3 Money Supply (YoY),LOW,EUR
 10/25/2023 08:00:00,Private Loans (YoY),LOW,EUR
@@ -6922,7 +6922,7 @@ Start,Name,Impact,Currency
 10/26/2023 15:30:00,4-Week Bill Auction,LOW,USD
 10/26/2023 16:45:00,BoE's Cunliffe speech,MEDIUM,GBP
 10/26/2023 17:00:00,7-Year Note Auction,LOW,USD
-10/26/2023 21:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+10/26/2023 21:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 10/26/2023 23:30:00,Tokyo Consumer Price Index (YoY),HIGH,JPY
 10/26/2023 23:30:00,"Tokyo CPI ex Food, Energy (YoY)",HIGH,JPY
 10/26/2023 23:30:00,Tokyo CPI ex Fresh Food (YoY),MEDIUM,JPY
@@ -7365,13 +7365,13 @@ Start,Name,Impact,Currency
 11/14/2023 09:30:00,BoC's Gravelle speech,MEDIUM,CAD
 11/14/2023 09:40:00,3-Month Letras Auction,LOW,EUR
 11/14/2023 09:40:00,9-Month Letras Auction,LOW,EUR
-11/14/2023 10:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-11/14/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+11/14/2023 10:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+11/14/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 11/14/2023 10:00:00,Employment Change (QoQ),MEDIUM,EUR
 11/14/2023 10:00:00,Employment Change (YoY),LOW,EUR
 11/14/2023 10:00:00,Gross Domestic Product s.a. (QoQ),HIGH,EUR
 11/14/2023 10:00:00,Gross Domestic Product s.a. (YoY),HIGH,EUR
-11/14/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+11/14/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 11/14/2023 10:30:00,Fed's Jefferson speech,MEDIUM,USD
 11/14/2023 11:00:00,NFIB Business Optimism Index,LOW,USD
 11/14/2023 12:00:00,BoE's Dhingra speech,MEDIUM,GBP
@@ -7629,9 +7629,9 @@ Start,Name,Impact,Currency
 11/24/2023 07:00:00,Gross Domestic Product w.d.a (YoY),MEDIUM,EUR
 11/24/2023 07:30:00,Employment Level (QoQ),LOW,CHF
 11/24/2023 09:00:00,German Buba President Nagel speech,MEDIUM,EUR
-11/24/2023 09:00:00,IFO – Business Climate,MEDIUM,EUR
-11/24/2023 09:00:00,IFO – Current Assessment,MEDIUM,EUR
-11/24/2023 09:00:00,IFO – Expectations,MEDIUM,EUR
+11/24/2023 09:00:00,IFO - Business Climate,MEDIUM,EUR
+11/24/2023 09:00:00,IFO - Current Assessment,MEDIUM,EUR
+11/24/2023 09:00:00,IFO - Expectations,MEDIUM,EUR
 11/24/2023 10:00:00,ECB's President Lagarde speech,HIGH,EUR
 11/24/2023 13:00:00,ECB's De Guindos speech,MEDIUM,EUR
 11/24/2023 13:30:00,Retail Sales (MoM),MEDIUM,CAD
@@ -7697,7 +7697,7 @@ Start,Name,Impact,Currency
 11/29/2023 08:00:00,Harmonized Index of Consumer Prices (MoM),LOW,EUR
 11/29/2023 08:00:00,Harmonized Index of Consumer Prices (YoY),MEDIUM,EUR
 11/29/2023 08:00:00,Retail Sales (YoY),LOW,EUR
-11/29/2023 09:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+11/29/2023 09:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 11/29/2023 09:00:00,Business Confidence,LOW,EUR
 11/29/2023 09:00:00,Consumer Confidence,LOW,EUR
 11/29/2023 09:30:00,Consumer Credit,LOW,GBP
@@ -7796,7 +7796,7 @@ Start,Name,Impact,Currency
 11/30/2023 16:00:00,BoE's Greene speech,MEDIUM,GBP
 11/30/2023 16:30:00,4-Week Bill Auction,LOW,USD
 11/30/2023 17:00:00,German Buba President Nagel speech,MEDIUM,EUR
-11/30/2023 21:00:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+11/30/2023 21:00:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 11/30/2023 22:00:00,Judo Bank Manufacturing PMI,LOW,AUD
 11/30/2023 23:30:00,Jobs / Applicants Ratio,LOW,JPY
 11/30/2023 23:30:00,Unemployment Rate,MEDIUM,JPY
@@ -8051,9 +8051,9 @@ Start,Name,Impact,Currency
 12/12/2023 07:00:00,ILO Unemployment Rate (3M),HIGH,GBP
 12/12/2023 09:40:00,3-Month Letras Auction,LOW,EUR
 12/12/2023 09:40:00,9-Month Letras Auction,LOW,EUR
-12/12/2023 10:00:00,ZEW Survey – Current Situation,MEDIUM,EUR
-12/12/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
-12/12/2023 10:00:00,ZEW Survey – Economic Sentiment,MEDIUM,EUR
+12/12/2023 10:00:00,ZEW Survey - Current Situation,MEDIUM,EUR
+12/12/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
+12/12/2023 10:00:00,ZEW Survey - Economic Sentiment,MEDIUM,EUR
 12/12/2023 11:00:00,NFIB Business Optimism Index,LOW,USD
 12/12/2023 13:30:00,Consumer Price Index (MoM),HIGH,USD
 12/12/2023 13:30:00,Consumer Price Index (YoY),HIGH,USD
@@ -8219,9 +8219,9 @@ Start,Name,Impact,Currency
 12/15/2023 20:30:00,CFTC S&P 500 NC Net Positions,LOW,USD
 12/17/2023 20:00:00,Westpac Consumer Survey,MEDIUM,NZD
 12/17/2023 21:30:00,Business NZ PSI,MEDIUM,NZD
-12/18/2023 09:00:00,IFO – Business Climate,MEDIUM,EUR
-12/18/2023 09:00:00,IFO – Current Assessment,MEDIUM,EUR
-12/18/2023 09:00:00,IFO – Expectations,MEDIUM,EUR
+12/18/2023 09:00:00,IFO - Business Climate,MEDIUM,EUR
+12/18/2023 09:00:00,IFO - Current Assessment,MEDIUM,EUR
+12/18/2023 09:00:00,IFO - Expectations,MEDIUM,EUR
 12/18/2023 10:30:00,BoE's Broadbent speech,MEDIUM,GBP
 12/18/2023 11:00:00,German Buba Monthly Report,MEDIUM,EUR
 12/18/2023 13:30:00,New Housing Price Index (MoM),LOW,CAD
@@ -8265,7 +8265,7 @@ Start,Name,Impact,Currency
 12/19/2023 14:55:00,GDT Price Index,LOW,NZD
 12/19/2023 21:00:00,Net Long-Term TIC Flows,LOW,USD
 12/19/2023 21:00:00,Total Net TIC Flows,LOW,USD
-12/19/2023 21:20:00,ANZ – Roy Morgan Consumer Confidence,MEDIUM,NZD
+12/19/2023 21:20:00,ANZ - Roy Morgan Consumer Confidence,MEDIUM,NZD
 12/19/2023 21:30:00,API Weekly Crude Oil Stock,LOW,USD
 12/19/2023 23:50:00,Adjusted Merchandise Trade Balance,LOW,JPY
 12/19/2023 23:50:00,Exports (YoY),MEDIUM,JPY
@@ -8413,7 +8413,7 @@ Start,Name,Impact,Currency
 12/27/2023 05:00:00,Annualized Housing Starts,LOW,JPY
 12/27/2023 05:00:00,Construction Orders (YoY),LOW,JPY
 12/27/2023 05:00:00,Housing Starts (YoY),LOW,JPY
-12/27/2023 09:00:00,ZEW Survey – Expectations,MEDIUM,CHF
+12/27/2023 09:00:00,ZEW Survey - Expectations,MEDIUM,CHF
 12/27/2023 13:55:00,Redbook Index (YoY),LOW,USD
 12/27/2023 15:00:00,Richmond Fed Manufacturing Index,LOW,USD
 12/27/2023 18:00:00,5-Year Note Auction,LOW,USD
