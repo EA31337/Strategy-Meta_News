@@ -68,7 +68,13 @@ struct MetaForexNewsRecord {
 
 #ifndef __resource__
 // Defines empty news data in no resource mode.
+string MetaNewsData2018 = "";
+string MetaNewsData2019 = "";
+string MetaNewsData2020 = "";
+string MetaNewsData2021 = "";
 string MetaNewsData2022 = "";
+string MetaNewsData2023 = "";
+string MetaNewsData2024 = "";
 #endif
 
 class Stg_Meta_News : public Strategy {
@@ -102,7 +108,13 @@ class Stg_Meta_News : public Strategy {
     StrategyAdd(Meta_News_Strategy_Impact_Low, 3);
     StrategyAdd(Meta_News_Strategy_Impact_None, 4);
     // Initialize news.
-    LoadNews();
+    LoadNews(MetaNewsData2018);
+    LoadNews(MetaNewsData2019);
+    LoadNews(MetaNewsData2020);
+    LoadNews(MetaNewsData2021);
+    LoadNews(MetaNewsData2022);
+    LoadNews(MetaNewsData2023);
+    LoadNews(MetaNewsData2024);
   }
 
   datetime StrToTimeEx(string _value) {
@@ -121,9 +133,9 @@ class Stg_Meta_News : public Strategy {
   /**
    * Load news records.
    */
-  void LoadNews() {
+  void LoadNews(string _news_data) {
     string news_records[];
-    StringSplit(MetaNewsData2022, '\n', news_records);
+    StringSplit(_news_data, '\n', news_records);
     for (int i = 1; i < ArraySize(news_records); i++) {
       string record_fields[];
       DictStruct<short, MetaForexNewsRecord> record_dict;
