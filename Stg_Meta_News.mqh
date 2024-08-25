@@ -9,11 +9,11 @@
 
 // User input params.
 INPUT2_GROUP("Meta News strategy: main params");
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Main = STRAT_RSI;                   // Main strategy
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_MA_BREAKOUT;    // Strategy for high impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_MA_BREAKOUT;  // Strategy for medium impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_MA_BREAKOUT;     // Strategy for low impact news
-INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_NONE;           // Strategy for no impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Main = STRAT_OSCILLATOR_TREND;   // Main strategy
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_High = STRAT_DEMA;        // Strategy for high impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Medium = STRAT_DEMARKER;  // Strategy for medium impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_Low = STRAT_NONE;         // Strategy for low impact news
+INPUT2 ENUM_STRATEGY Meta_News_Strategy_Impact_None = STRAT_NONE;        // Strategy for no impact news
 INPUT3_GROUP("Meta News strategy: common params");
 INPUT3 float Meta_News_LotSize = 0;                // Lot size
 INPUT3 int Meta_News_SignalOpenMethod = 0;         // Signal open method
@@ -52,10 +52,10 @@ struct Stg_Meta_News_Params_Defaults : StgParams {
 
 // Define the enumeration to store news impact level.
 enum ENUM_META_NEWS_IMPACT_LEVEL {
-  HIGH,
-  MEDIUM,
-  LOW,
-  NONE,
+  META_NEWS_IMPACT_HIGH,
+  META_NEWS_IMPACT_MEDIUM,
+  META_NEWS_IMPACT_LOW,
+  META_NEWS_IMPACT_NONE,
 };
 
 // Define the structure to store news records.
@@ -149,6 +149,16 @@ class Stg_Meta_News : public Strategy {
       record.name = record_fields[1];
       record.impact = (ENUM_META_NEWS_IMPACT_LEVEL)StringToInteger(record_fields[2]);
       record.currency = record_fields[3];
+      // Sets impact.
+      if (record_fields[2] == "HIGH") {
+        record.impact = META_NEWS_IMPACT_HIGH;
+      } else if (record_fields[2] == "MEDIUM") {
+        record.impact = META_NEWS_IMPACT_MEDIUM;
+      } else if (record_fields[2] == "LOW") {
+        record.impact = META_NEWS_IMPACT_LOW;
+      } else {
+        record.impact = META_NEWS_IMPACT_NONE;
+      }
       if (news.KeyExists(record.start)) {
         record_dict = news.GetByKey(record.start);
       }
@@ -193,17 +203,16 @@ class Stg_Meta_News : public Strategy {
       for (DictStructIterator<short, MetaForexNewsRecord> iter = _news_records.Begin(); iter.IsValid(); ++iter) {
         MetaForexNewsRecord _news_item = iter.Value();
         switch (_news_item.impact) {
-          case HIGH:
+          case META_NEWS_IMPACT_HIGH:
             _strat_ref = strats.GetByKey(1);
-            return _strat_ref;
             break;
-          case MEDIUM:
+          case META_NEWS_IMPACT_MEDIUM:
             _strat_ref = strats.GetByKey(2);
             break;
-          case LOW:
+          case META_NEWS_IMPACT_LOW:
             _strat_ref = strats.GetByKey(3);
             break;
-          case NONE:
+          case META_NEWS_IMPACT_NONE:
             _strat_ref = strats.GetByKey(4);
             break;
         }
