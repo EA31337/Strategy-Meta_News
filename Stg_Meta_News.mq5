@@ -62,6 +62,7 @@ input bool Info_On_Chart = true;          // Display info on chart.
 #resource "\\data\\news2020.csv" as string MetaNewsData2020
 #resource "\\data\\news2021.csv" as string MetaNewsData2021
 #resource "\\data\\news2022.csv" as string MetaNewsData2022
+#resource "\\data\\news2023.csv" as string MetaNewsData2023
 #endif
 
 // Class variables.
